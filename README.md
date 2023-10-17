@@ -1,2 +1,2 @@
-# Scroll-to-Top
-Discourse Scroll to Top Theme Component
+# Scroll-to
+Discourse Scroll to Top/Bottom Theme Component

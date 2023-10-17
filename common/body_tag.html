@@ -1,23 +1,34 @@
-<script>$(document).ready(function($){
-$(function(){
-$(window).scroll(function(){
-if ($(this).scrollTop() > 100){
-$('.move-up').fadeIn();
-} else {
-$('.move-up').fadeOut();
-}
-});
-$('.move-up button').click(function(){
-$('body,html').animate({
-scrollTop: 0
-}, 800);
-return false;
-});
-});
-});</script>
-
-<form class="move-up" action="#up">
-<button>
-<svg class="fa d-icon d-icon-chevron-up svg-icon svg-node" aria-hidden="true"><use xlink:href="#chevron-up"></use></svg>
-</button>
-</form>
+<script>
+  $(document).ready(function($) {
+    $(function() {
+      $('.move-up button').click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 500);
+        return false;
+      });
+      $('.move-bottom button').click(function() {
+        $('body,html').animate({
+          scrollTop: $(document).height()-$(window).height()
+        }, 500);
+        return false;
+      });
+    });
+  });
+</script>
+<div class="controllerd">
+    <form class="move-up">
+    <button>
+        <svg class="fa d-icon d-icon-chevron-up svg-icon svg-node" aria-hidden="true">
+        <use xlink:href="#chevron-up"></use>
+        </svg>
+    </button>
+    </form>
+    <form class="move-bottom">
+    <button>
+        <svg class="fa d-icon d-icon-chevron-down svg-icon svg-node" aria-hidden="true">
+        <use xlink:href="#chevron-down"></use>
+        </svg>
+    </button>
+    </form>
+</div>

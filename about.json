@@ -1,9 +1,10 @@
 {
-  "name": "Scroll to Top",
-  "about_url": "https://github.com/davidkingham/Scroll-to-Top/",
+  "name": "Scroll to",
+  "about_url": "https://github.com/zarathucorp/Discourse-Scroll-to-Theme",
   "license_url": "https://github.com/davidkingham/Scroll-to-Top/blob/master/LICENSE",
   "component": true,
    "assets": {
-        "chevron-up": "assets/chevron-up.svg"
+        "chevron-up": "assets/chevron-up.svg",
+        "chevron-down": "assets/chevron-down.svg"
    }
 }

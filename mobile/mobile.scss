@@ -1,16 +1,5 @@
-.move-up {
-    bottom: 50px;
-    right: 30px;
-}
-.move-up button {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    height: 45px;
-    width: 45px;
-}
-.move-up button:active:hover {
-    padding-right:4px !important;
-    margin-right:2px;
+.controllerd {
+    bottom: 3%;
+    right: 6%;
+    gap: 10px; /* 특이하게 모바일만 간격이 사라지는 문제 처리 */
 }

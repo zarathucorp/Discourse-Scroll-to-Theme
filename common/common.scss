@@ -1,10 +1,44 @@
-.move-up {
+.controllerd {
     position: fixed;
-    z-index:399;
-    display: none;
+    z-index: 399;
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+}
+
+.move-up, .move-bottom {
     color: $secondary;
 }
-.move-up button {
-    border:none;
+
+.move-up button, .move-bottom button {
+    border: none;
     background: #283d22;
+    transition: transform 0.3s, box-shadow 0.3s; /* 호버 효과용 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    cursor: pointer; /* 마우스 포인터 변경 */
+    border-radius: 3px;
+    width: 35px;
+    height: 35px;
+}
+
+.move-up button:hover, .move-bottom button:hover {
+    transform: scale(1.1); /* 호버 시 약간 확대 */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); /* 그림자 강조 */
+}
+
+.move-up button:active, .move-bottom button:active {
+    animation: shake 0.5s; /* 클릭 시 흔들림 애니메이션 */
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-2px, 0px) rotate(1deg); }
+    30% { transform: translate(1px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-1px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
